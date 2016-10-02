@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0"
+            prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.maze.runner.controller.Controller">
+    <top>
+        <Canvas fx:id="field" height="800.0" width="800.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="20.0"/>
+            </BorderPane.margin>
+        </Canvas>
+    </top>
+    <center>
+        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#generateMaze" prefHeight="57.0" prefWidth="103.0"
+                        text="Generate maze">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="100.0" right="20.0" top="30.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="findExitBtn" mnemonicParsing="false" onAction="#findExit" prefHeight="57.0"
+                        prefWidth="103.0" text="Find exit">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="100.0" right="20.0" top="30.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#clearPath" prefHeight="57.0" prefWidth="103.0"
+                        text="Clear path">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="100.0" right="20.0" top="30.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#clearMaze" prefHeight="57.0" prefWidth="103.0"
+                        text="Clear maze">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="100.0" right="20.0" top="30.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#saveMaze" text="Save">
+                    <HBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </center>
+</BorderPane>
